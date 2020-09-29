@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -26,7 +27,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen.withOpacity(controller.value),
+      backgroundColor: Colors.white10.withOpacity(controller.value),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -38,12 +39,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                 Hero(
                   tag: 'anndatalogo',
                   child: Container(
-                    child: Image.asset('image/anndatalogo.jpg'),
                     height: 60.0,
+                    child: Image.asset('images/anndatalogo1.png'),
                   ),
                 ),
                 TypewriterAnimatedTextKit(
-                  text: ['A N N D A T A'],
+                  text: [' A N N D A T A'],
                   textStyle: TextStyle(
                     color: Colors.red,
                     fontSize: 35.0,
