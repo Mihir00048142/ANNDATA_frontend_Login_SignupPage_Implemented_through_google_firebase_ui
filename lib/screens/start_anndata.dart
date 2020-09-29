@@ -29,7 +29,7 @@ class _StartAnndataState extends State<StartAnndata> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          backgroundColor: Color.fromRGBO(217, 255, 217, 0.8).withOpacity(controller.value),
+          backgroundColor: Colors.green.withOpacity(controller.value),
           body: SafeArea(
             child: Center(
               child: Column(
@@ -38,11 +38,7 @@ class _StartAnndataState extends State<StartAnndata> with SingleTickerProviderSt
                     height: 119.0,
                   ),
                   Container(
-                    child: CircleAvatar(
-                      radius: 150.0,
-                      backgroundColor: Colors.white,
-                      backgroundImage: AssetImage('image/anndatalogo.png'),
-                    ),
+                    child: Center(child: Image.asset('image/anndatalogo.jpg'),),
                   ),
                   SizedBox(
                     height: 40.0,
@@ -54,7 +50,7 @@ class _StartAnndataState extends State<StartAnndata> with SingleTickerProviderSt
                       child: Text(
                           'PRESS IT AND GO!!!'
                       ),
-                      color: Colors.lightGreenAccent,
+                      color: Colors.yellow,
                       onPressed: (){
                         Navigator.pushNamed(context, WelcomeScreen.id);
                       },
